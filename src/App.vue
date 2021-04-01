@@ -1,29 +1,40 @@
 <template>
   <div>
     <Toast/>
-    <InputText v-model="text"/>
-    <Button label="Senden" icon="pi pi-user" @click="send"></Button>
+<!--    <MyInputText/>-->
+<!--    <MyRadioButton/>-->
+    <MyDataTable/>
   </div>
 </template>
 
 <script>
 
+import ProductService from './service/ProductService';
+
+// import MyRadioButton from "@/components/MyRadioButton";
+// import MyInputText from "@/components/MyInputText";
+import MyDataTable from "@/components/MyDataTable";
 
 export default {
   data() {
     return {
-      text: null
+      city: null,
+      productService: null,
+      products: null
     }
   },
-  methods: {
-    send() {
-      this.$toast.add({
-        severity: 'info',
-        summary: 'Hinweis',
-        detail: this.text
-      });
-    }
-  }
+  created() {
+    this.productService = new ProductService();
+  },
+  mounted() {
+    this.productService.getProductsSmall().then(data => this.products = data);
+  },
+  components: {
+    // MyRadioButton,
+    // MyInputText,
+    MyDataTable
+  },
+  methods: {}
 }
 
 </script>
