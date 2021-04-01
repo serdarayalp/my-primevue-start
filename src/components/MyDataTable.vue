@@ -1,11 +1,22 @@
 <template>
   <div>
-    <DataTable :value="products">
-      <Column field="code" header="Code"></Column>
-      <Column field="name" header="Name"></Column>
-      <Column field="category" header="Category"></Column>
-      <Column field="quantity" header="Quantity"></Column>
+
+    <DataTable :value="products"
+               showGridlines stripedRows
+               :paginator="true"
+               :rows="5"
+               paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
+               :rowsPerPageOptions="[10,20,50]"
+               currentPageReportTemplate="Showing {first} to {last} of {totalRecords}">
+      <template #header>
+        Header
+      </template>
+      <Column field="name" header="Name" sortable="true"></Column>
+      <Column field="category" header="Category" sortable="true"></Column>
+      <Column field="quantity" header="Quantity" sortable="true"></Column>
     </DataTable>
+
+
   </div>
 </template>
 
