@@ -1,9 +1,18 @@
 <template>
-  <div>
-    <Toast/>
-<!--    <MyInputText/>-->
-<!--    <MyRadioButton/>-->
-    <MyDataTable/>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col bg-dark text-white">
+        <a class="navbar-brand">ImmCare</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 bg-info p-2">
+
+      </div>
+      <div class="col-10 p-2 ">
+        <MyDataTable/>
+      </div>
+    </div>
   </div>
 </template>
 

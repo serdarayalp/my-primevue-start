@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <DataTable :value="products"
                showGridlines stripedRows
                :paginator="true"
@@ -15,8 +14,6 @@
       <Column field="category" header="Category" sortable="true"></Column>
       <Column field="quantity" header="Quantity" sortable="true"></Column>
     </DataTable>
-
-
   </div>
 </template>
 

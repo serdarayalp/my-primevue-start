@@ -12,10 +12,10 @@ import ColumnGroup from 'primevue/columngroup';
 import Dialog from 'primevue/dialog';
 import RadioButton from 'primevue/radiobutton';
 
-/*
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css"
-*/
+
 
 //theme
 import 'primevue/resources/themes/bootstrap4-light-blue/theme.css'
