@@ -1,18 +1,24 @@
 <template>
   <div>
+    <h5>Checkbox</h5>
     <DataTable :value="products"
                showGridlines stripedRows
                :paginator="true"
                :rows="5"
+               v-model:selection="selectedProducts"
+               dataKey="id"
                paginatorTemplate="CurrentPageReport FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
                :rowsPerPageOptions="[10,20,50]"
                currentPageReportTemplate="Showing {first} to {last} of {totalRecords}">
       <template #header>
         Header
       </template>
+
+      <Column selectionMode="multiple" headerStyle="width: 3em"></Column>
       <Column field="name" header="Name" sortable="true"></Column>
       <Column field="category" header="Category" sortable="true"></Column>
       <Column field="quantity" header="Quantity" sortable="true"></Column>
+
     </DataTable>
   </div>
 </template>
@@ -24,6 +30,7 @@ import ProductService from '../service/ProductService';
 export default {
   data() {
     return {
+      selectedProducts: null,
       products: [
         {
           "id": "1000",

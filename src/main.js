@@ -11,6 +11,9 @@ import Column from 'primevue/column';
 import ColumnGroup from 'primevue/columngroup';
 import Dialog from 'primevue/dialog';
 import RadioButton from 'primevue/radiobutton';
+import Panel from 'primevue/panel';
+import Toolbar from 'primevue/toolbar';
+import MegaMenu from 'primevue/megamenu';
 
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -37,5 +40,8 @@ app.component('Column', Column);
 app.component('ColumnGroup', ColumnGroup);
 app.component('Dialog', Dialog);
 app.component('RadioButton', RadioButton);
+app.component('Panel', Panel);
+app.component('Toolbar', Toolbar);
+app.component('MegaMenu', MegaMenu);
 
 app.mount('#app')

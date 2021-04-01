@@ -1,8 +1,8 @@
 <template>
-  <div class="container-fluid">
+  <div>
     <div class="row">
-      <div class="col bg-dark text-white">
-        <a class="navbar-brand">ImmCare</a>
+      <div class="col-12">
+        <MyMenue />
       </div>
     </div>
     <div class="row">
@@ -10,6 +10,17 @@
 
       </div>
       <div class="col-10 p-2 ">
+
+        <Panel header="Header">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.
+        </Panel>
+
+        <br/>
+
         <MyDataTable/>
       </div>
     </div>
@@ -23,6 +34,7 @@ import ProductService from './service/ProductService';
 // import MyRadioButton from "@/components/MyRadioButton";
 // import MyInputText from "@/components/MyInputText";
 import MyDataTable from "@/components/MyDataTable";
+import MyMenue from "@/components/MyMenue";
 
 export default {
   data() {
@@ -41,7 +53,8 @@ export default {
   components: {
     // MyRadioButton,
     // MyInputText,
-    MyDataTable
+    MyDataTable,
+    MyMenue
   },
   methods: {}
 }
