@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h5>Checkbox</h5>
     <DataTable :value="products"
                showGridlines stripedRows
                :paginator="true"

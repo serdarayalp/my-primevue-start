@@ -1,5 +1,5 @@
 <template>
-  <MegaMenu :model="items" />
+  <MegaMenu :model="items" orientation="vertical"/>
 </template>
 
 <script>
