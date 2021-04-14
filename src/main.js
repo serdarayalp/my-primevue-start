@@ -15,6 +15,7 @@ import Panel from 'primevue/panel';
 import Toolbar from 'primevue/toolbar';
 import MegaMenu from 'primevue/megamenu';
 import Menubar from 'primevue/menubar';
+import Card from 'primevue/card';
 
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -82,5 +83,6 @@ app.component('Panel', Panel);
 app.component('Toolbar', Toolbar);
 app.component('MegaMenu', MegaMenu);
 app.component('Menubar', Menubar);
+app.component('Card', Card);
 
 app.mount('#app')
